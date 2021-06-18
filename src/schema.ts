@@ -378,7 +378,7 @@ export interface Field {
 	value: string | number | Date;
 	semantics?: Semantics;
 	dateStyle?: string;
-	ignoreTimeZone?: boolean;
+	ignoresTimeZone?: boolean;
 	isRelative?: boolean;
 	timeStyle?: string;
 	currencyCode?: string;
@@ -415,7 +415,7 @@ const field = Joi.object().keys({
 		/(PKDateStyleNone|PKDateStyleShort|PKDateStyleMedium|PKDateStyleLong|PKDateStyleFull)/,
 		"date style",
 	),
-	ignoreTimeZone: Joi.boolean(),
+	ignoresTimeZone: Joi.boolean(),
 	isRelative: Joi.boolean(),
 	timeStyle: Joi.string().regex(
 		/(PKDateStyleNone|PKDateStyleShort|PKDateStyleMedium|PKDateStyleLong|PKDateStyleFull)/,
